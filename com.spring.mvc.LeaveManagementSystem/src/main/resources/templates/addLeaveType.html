@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Enter Leave Type Details </h2>
+<form th:action="@{/saveLeaveType}" th:object="${newLeave}" method="post">
+	<input type="hidden" th:field="*{leaveTypeId}" /> 
+
+	<label>Leave Name: </label>
+	<input type="text" th:field="*{leaveName}" /> 
+
+	<label>Max Days Allowed: </label>
+	<input type="text" th:field="*{maxDaysAllowed}" /> 
+
+	<button type="submit">submit</button>
+</form>
+</body>
+</html>

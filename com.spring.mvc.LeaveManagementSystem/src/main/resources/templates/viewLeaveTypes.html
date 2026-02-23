@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border = 1>
+	<tr>
+		<th>Leave Type ID</th>
+		<th>Leave Name</th>
+		<th>Max Days Allowed</th>
+	</tr>
+	<tr th:each="l:${leaveTypeList}">
+		<td th:text= "${l.leaveTypeId}"></td>
+		<td th:text= "${l.leaveName}"></td>
+		<td th:text= "${l.maxDaysAllowed}"></td>
+	</tr>
+</table>
+</body>
+</html>

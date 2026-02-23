@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border = 1>
+	<tr>
+		<th>Employee ID</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Department</th>
+		<th>Joining Date</th>
+		<th>Action</th>
+	</tr>
+	<tr th:each="emp:${employees}">
+		<td th:text= "${emp.id}"></td>
+		<td th:text= "${emp.name}"></td>
+		<td th:text= "${emp.email}"></td>
+		<td th:text= "${emp.department}"></td>
+		<td th:text= "${emp.joining_date}"></td>
+		<td> <a th:href = "@{/updateEmployee/{id}(id=${emp.id})}"> Update </a>
+		 <a th:href = "@{/deleteEmployee/{id}(id=${emp.id})}"> Delete </a> </td>
+	</tr>
+</table>
+</body>
+</html>
